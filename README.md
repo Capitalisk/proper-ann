@@ -56,3 +56,25 @@ let outputs = anna.run([1, 1]);
 Many functions which the ANN uses internally can be customized.
 The default `activationFunction` is `ProperANN.eluActivationFunction` and the default `activationDerivativeFunction` (used to calculate gradients) is `ProperANN.eluActivationDerivativeFunction`.
 The `ANN` class exposes a number of static functions which can be used by passing them to the ANN's constructor via the `activationFunction` and `activationDerivativeFunction` options during instantiation. It's important that the specified `activationFunction` and `activationDerivativeFunction` correspond.
+
+### Serializing to and from model files
+
+You can use the `proper-ann-serializer` module to serialize your trained ANN model to and from the file system like this:
+
+```js
+const ProperANNSerializer = require('proper-ann-serializer');
+
+let annSerializer = new ProperANNSerializer();
+
+try {
+  // This will look for a directory called my-model.
+  await annSerializer.loadFromDir(ann, 'my-model');
+} catch (error) {
+  console.log('Could not find an existing ANN model, will start from scratch...');
+}
+
+// ...
+
+// Will throw if it fails to save.
+await annSerializer.saveToDir(ann, 'my-model');
+```
