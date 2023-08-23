@@ -67,6 +67,8 @@ const ProperANNSerializer = require('proper-ann-serializer');
 (async () => {
   let annSerializer = new ProperANNSerializer();
 
+  // ...
+
   try {
     // This will look for a directory called my-model.
     await annSerializer.loadFromDir(ann, 'my-model');
