@@ -4,20 +4,15 @@ Simple and flexible Artificial Neural Network library for JavaScript/Node.js.
 ## Usage
 
 ### Importing
-```js
-const { ANN } = require('proper-ann');
-```
-
-OR
 
 ```js
-import { ANN } from 'proper-ann';
+const ProperANN = require('proper-ann');
 ```
 
 ### Instantiation
 
 ```js
-let ann = new ANN({
+let ann = new ProperANN({
   learningRate: .0001,
   layerNodeCounts: [100, 2000, 2000, 100],
   weightDecayFactor: .000001
@@ -59,5 +54,5 @@ let outputs = anna.run([1, 1]);
 ### Custom functions
 
 Many functions which the ANN uses internally can be customized.
-The default `activationFunction` is `ANN.eluActivationFunction` and the default `activationDerivativeFunction` (used to calculate gradients) is `ANN.eluActivationDerivativeFunction`.
+The default `activationFunction` is `ProperANN.eluActivationFunction` and the default `activationDerivativeFunction` (used to calculate gradients) is `ProperANN.eluActivationDerivativeFunction`.
 The `ANN` class exposes a number of static functions which can be used by passing them to the ANN's constructor via the `activationFunction` and `activationDerivativeFunction` options during instantiation. It's important that the specified `activationFunction` and `activationDerivativeFunction` correspond.

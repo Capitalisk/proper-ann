@@ -1,4 +1,4 @@
-class ANN {
+class ProperANN {
   constructor({
     layerNodeCounts,
     learningRate,
@@ -51,24 +51,24 @@ class ANN {
     this.weightDecayFactor = weightDecayFactor;
     this.activationLeakFactor = activationLeakFactor;
 
-    this.lossFunction = lossFunction || ANN.meanSquaredLossFunction;
-    this.lossDerivativeFunction = lossDerivativeFunction || ANN.squaredLossDerivativeFunction;
+    this.lossFunction = lossFunction || ProperANN.meanSquaredLossFunction;
+    this.lossDerivativeFunction = lossDerivativeFunction || ProperANN.squaredLossDerivativeFunction;
 
-    this.weightInitFunction = weightInitFunction || ANN.heWeightInitFunction;
-    this.activationFunction = activationFunction || ANN.eluActivationFunction;
-    this.activationDerivativeFunction = activationDerivativeFunction || ANN.eluActivationDerivativeFunction;
+    this.weightInitFunction = weightInitFunction || ProperANN.heWeightInitFunction;
+    this.activationFunction = activationFunction || ProperANN.eluActivationFunction;
+    this.activationDerivativeFunction = activationDerivativeFunction || ProperANN.eluActivationDerivativeFunction;
 
-    this.errorInitFunction = errorInitFunction || ANN.simpleErrorInitFunction;
+    this.errorInitFunction = errorInitFunction || ProperANN.simpleErrorInitFunction;
 
-    this.biasInitFunction = biasInitFunction || ANN.zeroBiasInitFunction;
+    this.biasInitFunction = biasInitFunction || ProperANN.zeroBiasInitFunction;
     this.layerComputationFunction = layerComputationFunction;
 
-    this.errorDeltaFunction = errorDeltaFunction || ANN.simpleErrorDeltaFunction;
-    this.weightDeltaFunction = weightDeltaFunction || ANN.velocityWeightDeltaFunction;
-    this.biasDeltaFunction = biasDeltaFunction || ANN.simpleBiasDeltaFunction;
-    this.learningRateFunction = learningRateFunction || ANN.simpleLearningRateFunction;
+    this.errorDeltaFunction = errorDeltaFunction || ProperANN.simpleErrorDeltaFunction;
+    this.weightDeltaFunction = weightDeltaFunction || ProperANN.velocityWeightDeltaFunction;
+    this.biasDeltaFunction = biasDeltaFunction || ProperANN.simpleBiasDeltaFunction;
+    this.learningRateFunction = learningRateFunction || ProperANN.simpleLearningRateFunction;
 
-    this.trainInitFunction = trainInitFunction || ANN.simpleTrainInitFunction;
+    this.trainInitFunction = trainInitFunction || ProperANN.simpleTrainInitFunction;
     this.trainCleanupFunction = trainCleanupFunction;
 
     this.weightCount = 0;
@@ -147,7 +147,7 @@ class ANN {
 
   static eluActivationDerivativeFunction({currentLayerInputs, currentLayerOutputs, j}) {
     let input = currentLayerInputs[j];
-    return input > 0 ? 1 : ANN.eluActivationFunction.call(this, input) + 1;
+    return input > 0 ? 1 : ProperANN.eluActivationFunction.call(this, input) + 1;
   }
 
   static geluActivationFunction(input) {
@@ -267,7 +267,7 @@ class ANN {
       throw new Error(
         `Output array length of ${
           targetOutputs.length
-        } did not match the ANN output node count of ${
+        } did not match the ProperANN output node count of ${
           finalLayerOutputCount
         }`
       );
@@ -466,6 +466,4 @@ class ANN {
   }
 }
 
-module.exports = {
-  ANN,
-};
+module.exports = ProperANN;
