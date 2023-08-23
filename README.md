@@ -64,10 +64,10 @@ You can use the `proper-ann-serializer` module to serialize your trained ANN mod
 ```js
 const ProperANNSerializer = require('proper-ann-serializer');
 
+// ...
+
 (async () => {
   let annSerializer = new ProperANNSerializer();
-
-  // ...
 
   try {
     // This will look for a directory called my-model.
