@@ -48,7 +48,7 @@ let { loss } = ann.trainBatch([
 ### Inference
 
 ```js
-let outputs = anna.run([1, 1]);
+let outputs = ann.run([1, 1]);
 ```
 
 ### Custom functions
