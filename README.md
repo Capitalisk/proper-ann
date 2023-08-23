@@ -55,7 +55,7 @@ let outputs = anna.run([1, 1]);
 
 Many functions which the ANN uses internally can be customized.
 The default `activationFunction` is `ProperANN.eluActivationFunction` and the default `activationDerivativeFunction` (used to calculate gradients) is `ProperANN.eluActivationDerivativeFunction`.
-The `ANN` class exposes a number of static functions which can be used by passing them to the ANN's constructor via the `activationFunction` and `activationDerivativeFunction` options during instantiation. It's important that the specified `activationFunction` and `activationDerivativeFunction` correspond.
+The `ProperANN` class exposes a number of static functions which can be used by passing them to the ANN's constructor via the `activationFunction` and `activationDerivativeFunction` options during instantiation. It's important that the specified `activationFunction` and `activationDerivativeFunction` correspond.
 
 ### Serializing to and from model files
 
