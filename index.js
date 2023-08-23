@@ -55,19 +55,8 @@ class ANN {
     this.lossDerivativeFunction = lossDerivativeFunction || ANN.squaredLossDerivativeFunction;
 
     this.weightInitFunction = weightInitFunction || ANN.heWeightInitFunction;
-    // this.weightInitFunction = weightInitFunction || ANN.randomWeightInitFunction;
-
-    // this.activationFunction = activationFunction || ANN.geluActivationFunction;
-    // this.activationFunction = activationFunction || ANN.leakyReluActivationFunction;
     this.activationFunction = activationFunction || ANN.eluActivationFunction;
-    // this.activationFunction = activationFunction || ANN.reluActivationFunction;
-    // this.activationFunction = activationFunction || ANN.sigmoidActivationFunction;
-
-    // this.activationDerivativeFunction = activationDerivativeFunction || ANN.geluActivationDerivativeFunction;
-    // this.activationDerivativeFunction = activationDerivativeFunction || ANN.leakyReluActivationDerivativeFunction;
     this.activationDerivativeFunction = activationDerivativeFunction || ANN.eluActivationDerivativeFunction;
-    // this.activationDerivativeFunction = activationDerivativeFunction || ANN.reluActivationDerivativeFunction;
-    // this.activationDerivativeFunction = activationDerivativeFunction || ANN.sigmoidActivationDerivativeFunction;
 
     this.errorInitFunction = errorInitFunction || ANN.simpleErrorInitFunction;
 
@@ -76,7 +65,6 @@ class ANN {
 
     this.errorDeltaFunction = errorDeltaFunction || ANN.simpleErrorDeltaFunction;
     this.weightDeltaFunction = weightDeltaFunction || ANN.velocityWeightDeltaFunction;
-    // this.weightDeltaFunction = weightDeltaFunction || ANN.simpleWeightDeltaFunction;
     this.biasDeltaFunction = biasDeltaFunction || ANN.simpleBiasDeltaFunction;
     this.learningRateFunction = learningRateFunction || ANN.simpleLearningRateFunction;
 
