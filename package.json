@@ -1,6 +1,6 @@
 {
   "name": "proper-ann",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple, lightweight Artificial Neural Network library.",
   "main": "index.js",
   "scripts": {
