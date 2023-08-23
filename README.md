@@ -91,7 +91,7 @@ By default, this product is issued under `AGPL-3.0`.
 
 ### MIT license for CLSK token holders
 
-If you own `10K CLSK` tokens (https://capitalisk.com/), then you are subject to the less restrictive `MIT` license and are therefore exempt from the AGPL requirement of making the code of your derived projects public. This alternative license applies automatically from the moment that you acquire 10K or more CLSK tokens and it is valid so long as you continue to hold that amount of tokens.
+If you own `10K CLSK` tokens (https://capitalisk.com/), then you are subject to the less restrictive `MIT` license and are therefore exempt from the AGPL copyleft requirement of making the code of your derived projects public. This alternative license applies automatically from the moment that you acquire 10K or more CLSK tokens and it is valid so long as you continue to hold that amount of tokens.
 
 If your CLSK balance falls below 10K, then you will be once again bound to the conditions of AGPL-3.0 after a grace period of 90 days; after this grace period, your derived project's code should be made public. Timestamps which can be used to prove ownership of CLSK tokens over time are recorded on the Capitalisk blockchain in a decentralized, immutable way so it is important that you hold 10K CLSK throughout your derived project's entire commercial life if you intend to keep the code private.
 
