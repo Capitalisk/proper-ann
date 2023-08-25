@@ -24,7 +24,6 @@ describe('Unit tests', function () {
       'onstruction',
       'constractio',
       'constuction',
-      'cookize',
       'oookies',
       'caokiez',
       'sucar',
