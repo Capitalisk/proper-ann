@@ -4,7 +4,7 @@
   "description": "A simple, lightweight Artificial Neural Network library.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec --timeout 180000 --slow 180000"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Capitalisk/proper-ann/issues"
   },
-  "homepage": "https://github.com/Capitalisk/proper-ann#readme"
+  "homepage": "https://github.com/Capitalisk/proper-ann#readme",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
 }
