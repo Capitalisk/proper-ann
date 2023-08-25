@@ -83,6 +83,12 @@ const ProperANNSerializer = require('proper-ann-serializer');
 })();
 ```
 
+### Running tests
+
+```
+npm test
+```
+
 ### License
 
 ### AGPL by default
